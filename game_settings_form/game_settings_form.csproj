@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="126472.png" />
+    <None Remove="settings-512.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="126472.png" />
+    <Resource Include="settings-512.webp" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="vs_settings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vs_settings"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="470" MinWidth="470" MinHeight="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0,50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <StackPanel>
+                <TextBlock>Color theme:  
+                <ComboBox Margin="30,5,0,0" Width="80">
+                    <ListBoxItem Content="Dark" IsSelected="True"/>
+                    <ListBoxItem Content="Light"/>
+                </ComboBox>
+                </TextBlock>
+                <CheckBox Margin="0,5,0,0" IsChecked="True">Apply title case styling to menu bar</CheckBox>
+                <CheckBox Margin="0,5,0,0" IsChecked="True">Automatically adjust visual experience based on client performance</CheckBox>
+                <CheckBox Margin="20,5,0,0" Opacity="0.5" IsChecked="True">Enable rich client visual experience</CheckBox>
+                <CheckBox Margin="20,5,0,0" Opacity="0.5" IsChecked="True">Use hardware graphics acceleration if available</CheckBox>
+                <TextBlock Margin="0,5,0,0">Visual Studeio is currentely using hardware-accelerating rendering.</TextBlock>
+                <TextBlock>The visual experience settings automatically changed based on system capabilities</TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <StackPanel>
+                <TextBlock>
+                <TextBox Width="30"  Margin="0,5,0,0" Text="10"/> 
+                    items shown in Window menu
+                </TextBlock>
+
+                <TextBlock>
+                <TextBox Width="30"  Margin="0,5,0,0" Text="10"/> 
+                    items shown in recentely used files list
+                </TextBlock>
+
+                <CheckBox Margin="0,5,0,0" IsChecked="True">Show status bar</CheckBox>
+                <CheckBox Margin="0,5,0,0" IsChecked="True">Close button affects active tool window only</CheckBox>
+                <CheckBox Margin="0,5,0,0">Auto Hide button affects active tool window only</CheckBox>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="2">
+            <Button Height="20" Width="50" HorizontalAlignment="Right" Margin="0,0,75,0" >Okay</Button>
+            <Button Height="20" Width="50" HorizontalAlignment="Right" Margin="0,0,10,0">Cancle</Button>
+        </Grid>
+
+
+    </Grid>
+</Window>

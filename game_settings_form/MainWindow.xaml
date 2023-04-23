@@ -1,0 +1,85 @@
+﻿<Window x:Class="game_settings_form.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:game_settings_form"
+        mc:Ignorable="d"
+        Title="Options" Height="350" Width="400" Icon="/126472.png" MinHeight="350" MinWidth="400" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackPanel Grid.Row="0" Grid.Column="0" Name="Draw" Margin="0,0,0,0">
+                    <RadioButton Margin="0,30,0,05" IsChecked="True" >Draw one</RadioButton>
+                    <RadioButton>Draw three</RadioButton>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Grid.Column="0">
+                    <CheckBox Margin="0,05" IsChecked="True" Opacity="0.5">Dispaly animations</CheckBox>
+                    <CheckBox Margin="0,05" IsChecked="True">Play sound</CheckBox>
+                    <CheckBox Margin="0,05" IsChecked="True">Show tips</CheckBox>
+                    <CheckBox Margin="0,05">Always continue saved games</CheckBox>
+                    <CheckBox Margin="0,05">Always save games on exit</CheckBox>
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,0,0">
+                    <RadioButton Margin="0,30,0,05">No scoring</RadioButton>
+                    <RadioButton Margin="0,05" IsChecked="True">Standard scoring</RadioButton>
+                    <RadioButton Margin="0,05">Vegas scoring</RadioButton>
+                    <CheckBox Margin="20,5,0,5" Opacity="0.5">Cumulative</CheckBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <CheckBox IsChecked="True">Timed game</CheckBox>
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Button Height="30" Width="70" Margin="300,0,0,0">Cancel</Button>
+            <Button Height="30" Width="70" Margin="150,0,0,0">Ok</Button>
+        </Grid>
+
+    </Grid>
+</Window>
+
+    
